@@ -1,6 +1,13 @@
 import React from "react";
 
-const HeroSection = () => {
+const HeroSection = ({ newsData }) => {
+  if (!newsData) {
+    return <h2>NO DATA</h2>;
+  }
+  const { description, publishedAt, title, urlToImage, content } = newsData;
+
+  console.log(newsData);
+
   return (
     <div className="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-4 gap-6">
       <div className="hidden md:block col-span-1 space-y-6">
@@ -26,27 +33,15 @@ const HeroSection = () => {
         </div>
       </div>
       <div className="md:col-span-2 text-center border-x border-gray-400 px-3">
-        <img
-          src="https://galaxy.ai/_next/image?url=https%3A%2F%2Fimg.youtube.com%2Fvi%2FCK8eQDL7lco%2Fmaxresdefault.jpg&w=3840&q=75"
-          alt="Hero Section"
-          className="w-full"
-        />
+        <img src={urlToImage} alt="Hero Section" className="w-full" />
         <p className="text-blue-900 uppercase font-inter font-semibold text-[0.7rem] mt-4">
           Opinion
         </p>
-        <h1 className="text-2xl md:text-3xl font-bold font-inter">
-          Welcome To The Finest WordPress Theme For Writers
-        </h1>
-        <p className="text-gray-500 text-sm mt-2">February 01</p>
-        <p className="text-gray-700 mt-4">
-          A short summary of the article goes here, giving an overview of the
-          content. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
-          distinctio est recusandae illum itaque dolorem enim provident expedita
-          eveniet asperiores? Cupiditate illum maxime provident. Est, quaerat
-          accusamus. Quisquam saepe voluptates id aut unde sed dolores mollitia
-          ab corrupti illo ducimus culpa, officiis reprehenderit accusantium
-          odit maiores sequi ratione dignissimos ut!
+        <h1 className="text-2xl md:text-3xl font-bold font-inter">{title}</h1>
+        <p className="text-gray-500 text-sm mt-2">
+          {new Date(publishedAt).toISOString().split("T")[0]}{" "}
         </p>
+        <p className="text-gray-700 mt-4">{content.slice(0, 200)}</p>
         <button className="mt-4 px-5 py-1 bg-blue-900 text-white font-semibold rounded-sm text-sm">
           READ MORE
         </button>

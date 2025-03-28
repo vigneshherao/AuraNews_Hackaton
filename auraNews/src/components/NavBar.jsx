@@ -9,7 +9,7 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="border-b shadow-sm bg-white w-full">
+    <header className="border-b shadow-sm w-full border-gray-400">
       <div className="container mx-auto px-4 flex items-center justify-between py-4">
         <div className="md:hidden flex items-center gap-4">
           <button
@@ -43,7 +43,7 @@ const Navbar = () => {
           <RiGlobalLine className="text-lg" />
         </div>
       </div>
-      <nav className=" hidden md:block border-t">
+      <nav className=" hidden md:block border-t border-gray-400">
         <ul className="flex justify-center gap-6 py-3 text-sm font-medium uppercase">
           <li className="border-b-2 border-black pb-1">Home</li>
           <li>Dark Mode</li>

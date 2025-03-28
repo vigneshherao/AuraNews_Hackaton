@@ -1,3 +1,4 @@
+import Footer from "./Footer";
 import HeroSection from "./HeroSection";
 import HotTopics from "./HotTopics";
 import Navbar from "./NavBar";
@@ -9,6 +10,7 @@ const HomePage = () => {
       <Navbar />
       <HeroSection />
       <HotTopics />
+      <Footer />
     </div>
   );
 };

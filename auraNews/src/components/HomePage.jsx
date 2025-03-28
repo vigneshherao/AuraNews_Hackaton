@@ -3,26 +3,33 @@ import HeroSection from "./HeroSection";
 import HotTopics from "./HotTopics";
 import Navbar from "./NavBar";
 import React, { useEffect, useState } from "react";
+import ShimmerNewsGrid from "./ShimmerNewsGrid";
 
 const url =
   "https://newsapi.org/v2/top-headlines?country=us&apiKey=ae151eb321754ebc9dfb35f5ffcd2c4f";
 
 const HomePage = () => {
   const [news, setNews] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetchData();
   }, []);
 
   const fetchData = async () => {
-    const result = await fetch(url);
-    const data = await result.json();
-    setNews(data?.articles);
-    console.log(data);
+    try {
+      const result = await fetch(url);
+      const data = await result.json();
+      setNews(data?.articles || []);
+    } catch (error) {
+      console.error("Error fetching news:", error);
+    } finally {
+      setLoading(false);
+    }
   };
 
-  if (!news) {
-    return <h2>NO DATA</h2>;
+  if (loading) {
+    return <ShimmerNewsGrid />;
   }
 
   return (

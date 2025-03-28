@@ -1,8 +1,9 @@
 import React from "react";
+import ShimmerNewsGrid from "./ShimmerNewsGrid";
 
 const HeroSection = ({ newsData }) => {
   if (!newsData) {
-    return <h2>NO DATA</h2>;
+    return <ShimmerNewsGrid />;
   }
   const { description, publishedAt, title, urlToImage, content } = newsData;
 

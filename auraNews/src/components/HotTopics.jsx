@@ -1,8 +1,9 @@
 import React from "react";
+import ShimmerNewsGrid from "./ShimmerNewsGrid";
 
 const HotTopics = ({ newsData }) => {
   if (!newsData) {
-    return <h2>NO DATA</h2>;
+    return <ShimmerNewsGrid />;
   }
 
   return (

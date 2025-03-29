@@ -1,7 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import ShimmerNewsGrid from "./ShimmerNewsGrid";
 
 const Latest = ({ newsData }) => {
+  if (!newsData) {
+    return <ShimmerNewsGrid />;
+  }
+
   const mainNews = newsData[0];
   return (
     <section className="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-3 gap-8">

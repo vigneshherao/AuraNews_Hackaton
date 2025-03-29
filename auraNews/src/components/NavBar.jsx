@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import Marquee from "react-fast-marquee";
 import { FiMenu, FiSearch, FiShoppingCart } from "react-icons/fi";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 import { IoLogoMastodon } from "react-icons/io5";
@@ -41,9 +42,23 @@ const Navbar = () => {
           >
             <FaTwitter className="text-lg cursor-pointer hover:text-blue-400" />
           </a>
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaTwitter className="text-lg cursor-pointer hover:text-blue-400" />
+          </a>
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaTwitter className="text-lg cursor-pointer hover:text-blue-400" />
+          </a>
         </div>
 
-        <div className="hidden md:flex items-center gap-3">
+        <div className="hidden md:hidden items-center gap-3">
           <a
             href="https://www.facebook.com"
             target="_blank"
@@ -85,26 +100,56 @@ const Navbar = () => {
           AuraNews
         </h1>
         <div className="hidden md:flex items-center gap-3">
-          <FaFacebookF className="text-lg" />
-          <FaTwitter className="text-lg" />
-          <FaInstagram className="text-lg" />
-          <IoLogoMastodon className="text-lg" />
-          <RiGlobalLine className="text-lg" />
+          <a
+            href="https://www.facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaFacebookF className="text-lg cursor-pointer hover:text-blue-600" />
+          </a>
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaTwitter className="text-lg cursor-pointer hover:text-blue-400" />
+          </a>
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaTwitter className="text-lg cursor-pointer hover:text-blue-400" />
+          </a>
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaTwitter className="text-lg cursor-pointer hover:text-blue-400" />
+          </a>
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaTwitter className="text-lg cursor-pointer hover:text-blue-400" />
+          </a>
         </div>
       </div>
       <nav className=" hidden md:block border-t border-gray-400">
-        <ul className="flex justify-center gap-6 py-3 text-sm font-medium uppercase">
-          <li className="border-b-2 border-black pb-1">Home</li>
-          <li>Dark Mode</li>
-          <li>About</li>
-          <li>Posts +</li>
-          <li>Business +</li>
-          <li>Interview +</li>
-          <li>Politics +</li>
-          <li>Travel +</li>
-          <li>Contact</li>
-          <li>Shop +</li>
-        </ul>
+        <Marquee>
+          <p className="text-lg text-blue-700 font-semibold text-center px-6 py-4   border-blue-500">
+            This is the{" "}
+            <span className="text-blue-900 font-bold">
+              Aura News Hackathon Project
+            </span>{" "}
+            project, where innovation meets journalism. A heartfelt thank you to{" "}
+            <span className="text-blue-900 font-bold">Outlier</span> for giving
+            us this incredible opportunity to participate and showcase our
+            skills.
+          </p>
+        </Marquee>
       </nav>
     </header>
   );

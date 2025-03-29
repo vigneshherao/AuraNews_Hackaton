@@ -5,28 +5,31 @@ const HeroSection = ({ newsData }) => {
   if (!newsData) {
     return <ShimmerNewsGrid />;
   }
-  const { description, publishedAt, title, urlToImage, content } = newsData;
-
-  console.log(newsData);
+  const { description, publishedAt, title, urlToImage, content } = newsData[0];
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-4 gap-6">
       <div className="hidden md:block col-span-1 space-y-6">
         <div>
           <img
-            src="https://fox.withemes.com/times/wp-content/uploads/sites/23/2020/06/h_dzha-fGKG0havV4w-unsplash-207x300.jpg"
+            src={newsData[1].urlToImage}
             alt="Article Thumbnail"
             className="w-full"
           />
           <h3 className="font-bold text-lg mt-2 text-start">
-            Hero-Half Post Example
+            {newsData[1].title}
           </h3>
-          <p className="text-sm text-gray-600 text-start">April 23</p>
+          <p className="text-sm text-gray-600 text-start">
+            {newsData[1].publishedAt}
+          </p>
           <p className="text-gray-700 mt-2 text-start">
             Usu tantas omittantur ut, per te modo appetere senserit. Ei ius
             aperiam tincidunt, ea sit natum iisque repudiandae. Ea nec wisi
             facete. Ex hinc rebum omittam his. Enim dolore meliore ea mea. Ius
-            ei minim possit intellegat, an sea ornatus
+            ei minim possit intellegat, an sea ornatus natum iisque repudiandae.
+            Ea nec wisi facete. Ex hinc rebum omittam his. intellegat, an sea
+            ornatus ttam his. Enim dolore meliore ea mea. Ius ei minim possit
+            intellegat, an sea ornatus natum iisque repudiandae.
           </p>
           <a href="#" className="text-gray-500 mt-2 inline-block">
             READ MORE
@@ -50,31 +53,28 @@ const HeroSection = ({ newsData }) => {
       <div className="hidden md:block col-span-1 space-y-6">
         <div>
           <img
-            src="https://galaxy.ai/_next/image?url=https%3A%2F%2Fimg.youtube.com%2Fvi%2FCK8eQDL7lco%2Fmaxresdefault.jpg&w=3840&q=75"
+            src={newsData[2].urlToImage}
             alt="Article Thumbnail"
             className="w-full"
           />
           <h3 className="font-bold text-start text-lg mt-2">
-            Enter at your peril, past the vault door
+            {newsData[2].title}
           </h3>
           <p className="text-gray-700 text-start mt-2 text-sm">
-            A brief preview of this article with engaging content. A brief
-            preview of this article with engaging content.
+            {newsData[2].description}
           </p>
         </div>
         <div>
           <img
-            src="https://galaxy.ai/_next/image?url=https%3A%2F%2Fimg.youtube.com%2Fvi%2FCK8eQDL7lco%2Fmaxresdefault.jpg&w=3840&q=75"
+            src={newsData[3].urlToImage}
             alt="Article Thumbnail"
             className="w-full"
           />
           <h3 className="font-bold text-start  text-lg mt-2">
-            I decided to move out of the house
+            {newsData[3].title}
           </h3>
           <p className="text-gray-700 text-start mt-2 text-sm">
-            Another article with some compelling content to draw readers in. A
-            brief preview of this article with engaging content. A brief preview
-            of this article with engaging content.
+            {newsData[3].description}
           </p>
         </div>
       </div>

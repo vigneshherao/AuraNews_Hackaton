@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-white pt-5 px-6 border-t">
+    <footer className="w-full bg-white pt-5 px-6 border-t pb-4 md:pb-0">
       <div className="container mx-auto flex flex-col md:flex-row items-start md:justify-between gap-8">
         <div className="w-full md:w-1/3">
           <h3 className="font-bold mb-4 !text-xs text-start">GALLERY</h3>
@@ -10,7 +10,7 @@ const Footer = () => {
             <img
               src="https://i.ytimg.com/vi/sHg_HFpvBl8/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLD4X2X2d-s0kDbJD_5_GK1b8R-0Nw"
               alt="Gallery 1"
-              className="w-full h-16 object-cover rounded-md"
+              className="hidden md:flex w-full h-16 object-cover rounded-md"
             />
             <img
               src="https://i.ytimg.com/vi/sHg_HFpvBl8/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLD4X2X2d-s0kDbJD_5_GK1b8R-0Nw"

@@ -20,7 +20,7 @@ const HeroSection = ({ newsData }) => {
             {newsData[1].title}
           </h3>
           <p className="text-sm text-gray-600 text-start">
-            {newsData[1].publishedAt}
+            {new Date(newsData[1].publishedAt).toISOString().split("T")[0]}{" "}
           </p>
           <p className="text-gray-700 mt-2 text-start">
             Usu tantas omittantur ut, per te modo appetere senserit. Ei ius

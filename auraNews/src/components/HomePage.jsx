@@ -35,11 +35,9 @@ const HomePage = () => {
 
   return (
     <div className="w-full h-full bg-gray-100">
-      <Navbar />
       <HeroSection newsData={news.slice(0, 5)} />
       <HotTopics newsData={news.slice(5, 10)} />
       <Latest newsData={news.slice(10, 16)} />
-      <Footer />
     </div>
   );
 };

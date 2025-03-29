@@ -4,6 +4,7 @@ import HotTopics from "./HotTopics";
 import Navbar from "./NavBar";
 import React, { useEffect, useState } from "react";
 import ShimmerNewsGrid from "./ShimmerNewsGrid";
+import Latest from "./Latest";
 
 const url =
   "https://newsapi.org/v2/top-headlines?country=us&apiKey=ae151eb321754ebc9dfb35f5ffcd2c4f";
@@ -37,6 +38,7 @@ const HomePage = () => {
       <Navbar />
       <HeroSection newsData={news[0]} />
       <HotTopics newsData={news.slice(5, 10)} />
+      <Latest newsData={news.slice(10, 16)} />
       <Footer />
     </div>
   );

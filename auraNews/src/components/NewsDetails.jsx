@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ShimmerNewsGrid from "./ShimmerNewsGrid";
+import { Link } from "react-router-dom";
 
 const url =
   "https://newsapi.org/v2/top-headlines?country=us&apiKey=ae151eb321754ebc9dfb35f5ffcd2c4f";
@@ -55,12 +56,6 @@ const NewsDetails = () => {
           <p className="text-gray-700 mt-2 text-start">
             {sideArticle1.description}
           </p>
-          <a
-            href={sideArticle1.url}
-            className="text-blue-600 mt-2 inline-block"
-          >
-            READ MORE
-          </a>
         </div>
       </div>
       <div className="md:col-span-2 text-center border-x border-gray-400 px-3">

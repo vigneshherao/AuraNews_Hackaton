@@ -1,5 +1,6 @@
 import React from "react";
 import ShimmerNewsGrid from "./ShimmerNewsGrid";
+import { Link } from "react-router-dom";
 
 const HeroSection = ({ newsData }) => {
   if (!newsData) {
@@ -31,9 +32,9 @@ const HeroSection = ({ newsData }) => {
             ornatus ttam his. Enim dolore meliore ea mea. Ius ei minim possit
             intellegat, an sea ornatus natum iisque repudiandae.
           </p>
-          <a href="#" className="text-gray-500 mt-2 inline-block">
+          <Link to={`/newsDetails`} className="text-blue-600 mt-2 inline-block">
             READ MORE
-          </a>
+          </Link>
         </div>
       </div>
       <div className="md:col-span-2 text-center border-x border-gray-400 px-3">
@@ -46,9 +47,11 @@ const HeroSection = ({ newsData }) => {
           {new Date(publishedAt).toISOString().split("T")[0]}{" "}
         </p>
         <p className="text-gray-700 mt-4">{content.slice(0, 200)}</p>
-        <button className="mt-4 px-5 py-1 bg-blue-900 text-white font-semibold rounded-sm text-sm">
-          READ MORE
-        </button>
+        <Link to={"/newsDetails"}>
+          <button className="mt-4 px-5 py-1 bg-blue-900 text-white font-semibold rounded-sm text-sm">
+            READ MORE
+          </button>
+        </Link>
       </div>
       <div className="hidden md:block col-span-1 space-y-6">
         <div>

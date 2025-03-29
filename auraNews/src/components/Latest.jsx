@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Latest = ({ newsData }) => {
   const mainNews = newsData[0];
@@ -30,9 +31,11 @@ const Latest = ({ newsData }) => {
               </p>
             </div>
             <div className="flex justify-start items-start">
-              <button className="mt-4 px-5 py-1 bg-blue-900 text-white font-semibold rounded-sm text-sm">
-                READ MORE
-              </button>
+              <Link to={"/newsDetails"}>
+                <button className="mt-4 px-5 py-1 bg-blue-900 text-white font-semibold rounded-sm text-sm">
+                  READ MORE
+                </button>
+              </Link>
             </div>
           </div>
         </div>

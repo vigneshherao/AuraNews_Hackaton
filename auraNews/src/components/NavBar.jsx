@@ -19,19 +19,68 @@ const Navbar = () => {
             <FiMenu />
           </button>
         </div>
-        <div className="flex md:hidden items-center gap-3">
-          <FaFacebookF className="text-lg" />
-          <FaTwitter className="text-lg" />
-          <FaInstagram className="text-lg" />
+        <div className="flex md:flex items-center gap-3">
+          <a
+            href="https://www.facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaFacebookF className="text-lg cursor-pointer hover:text-blue-600" />
+          </a>
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaTwitter className="text-lg cursor-pointer hover:text-blue-400" />
+          </a>
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaTwitter className="text-lg cursor-pointer hover:text-blue-400" />
+          </a>
         </div>
 
         <div className="hidden md:flex items-center gap-3">
-          <FaFacebookF className="text-lg" />
-          <FaTwitter className="text-lg" />
-          <FaInstagram className="text-lg" />
-          <IoLogoMastodon className="text-lg" />
-          <RiGlobalLine className="text-lg" />
+          <a
+            href="https://www.facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaFacebookF className="text-lg cursor-pointer hover:text-blue-600" />
+          </a>
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaTwitter className="text-lg cursor-pointer hover:text-blue-400" />
+          </a>
+          <a
+            href="https://www.instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaInstagram className="text-lg cursor-pointer hover:text-pink-600" />
+          </a>
+          <a
+            href="https://mastodon.social"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <IoLogoMastodon className="text-lg cursor-pointer hover:text-purple-600" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/ishansharma7390/?originalSubdomain=in"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <RiGlobalLine className="text-lg cursor-pointer hover:text-blue-800" />
+          </a>
         </div>
+
         <h1 className="text-4xl text-center font-inter font-semibold">
           AuraNews
         </h1>
